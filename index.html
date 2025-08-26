@@ -43,14 +43,14 @@
     <main class="pb-20">
         <div class="banner-header bg-gradient-to-b from-white to-[#f6deea]">
             <p class="text-[35px] font-bold text-center pt-10">Purchase TK 200 or above & get <br><span
-                    class="text-[#E527B2]">20%
+                    class="text-[#E527B2]"><span id="discount-percentage">20</span>%
                     off</span>
             </p>
             <div class="text-center flex gap-5 items-center text-[20px] justify-center pt-10">
                 <p>
                     Use Promo Code
                 </p>
-                <button class="btn btn-secondary py-3.5 px-10 font-bold text-white">SELL200</button>
+                <button id="coupon-code" class="btn btn-secondary py-3.5 px-10 font-bold text-white">SELL200</button>
             </div>
             <img class="mx-auto relative top-20 max-w-[600px]" src="./assets/hero-bg.png" alt="">
         </div>
@@ -79,7 +79,7 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-[20px] font-bold">K. Accessories</p>
-                            <p class="text-[20px] font-bold opacity-75"><span>39.00</span> TK</p>
+                            <p class="text-[20px] font-bold opacity-75"><span>100.00</span> TK</p>
                             <button class="cart-btn btn btn-active btn-primary w-full mt-2.5 text-[20px]">Add to
                                 Cart</button>
                         </div>
@@ -97,7 +97,7 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-[20px] font-bold">K. Accessories</p>
-                            <p class="text-[20px] font-bold opacity-75"><span>39.00</span> TK</p>
+                            <p class="text-[20px] font-bold opacity-75"><span>200.00</span> TK</p>
                             <button class="cart-btn btn btn-active btn-primary w-full mt-2.5 text-[20px]">Add to
                                 Cart</button>
                         </div>
@@ -115,7 +115,7 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-[20px] font-bold">Home Cooker</p>
-                            <p class="text-[20px] font-bold opacity-75"><span>39.00</span> TK</p>
+                            <p class="text-[20px] font-bold opacity-75"><span>300.00</span> TK</p>
                             <button class="cart-btn btn btn-active btn-primary w-full mt-2.5 text-[20px]">Add to
                                 Cart</button>
                         </div>
@@ -142,7 +142,7 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-[20px] font-bold">Sports Back Cap</p>
-                            <p class="text-[20px] font-bold opacity-75"><span>39.00</span> TK</p>
+                            <p class="text-[20px] font-bold opacity-75"><span>50.00</span> TK</p>
                             <button class="cart-btn btn btn-active btn-primary w-full mt-2.5 text-[20px]">Add to
                                 Cart</button>
                         </div>
@@ -160,7 +160,7 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-[20px] font-bold">Full Jersey Set</p>
-                            <p class="text-[20px] font-bold opacity-75"><span>39.00</span> TK</p>
+                            <p class="text-[20px] font-bold opacity-75"><span>150.00</span> TK</p>
                             <button class="cart-btn btn btn-active btn-primary w-full mt-2.5 text-[20px]">Add to
                                 Cart</button>
                         </div>
@@ -178,7 +178,7 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-[20px] font-bold">Sports cates</p>
-                            <p class="text-[20px] font-bold opacity-75"><span>39.00</span> TK</p>
+                            <p class="text-[20px] font-bold opacity-75"><span>250.00</span> TK</p>
                             <button class="cart-btn btn btn-active btn-primary w-full mt-2.5 text-[20px]">Add to
                                 Cart</button>
                         </div>
@@ -206,7 +206,7 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-[20px] font-bold">Sports Back Cap</p>
-                            <p class="text-[20px] font-bold opacity-75"><span>39.00</span> TK</p>
+                            <p class="text-[20px] font-bold opacity-75"><span>75.00</span> TK</p>
                             <button class="cart-btn btn btn-active btn-primary w-full mt-2.5 text-[20px]">Add to
                                 Cart</button>
                         </div>
@@ -224,7 +224,7 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-[20px] font-bold">Full Jersey Set</p>
-                            <p class="text-[20px] font-bold opacity-75"><span>39.00</span> TK</p>
+                            <p class="text-[20px] font-bold opacity-75"><span>155.00</span> TK</p>
                             <button class="cart-btn btn btn-active btn-primary w-full mt-2.5 text-[20px]">Add to
                                 Cart</button>
                         </div>
@@ -242,7 +242,7 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-[20px] font-bold">Sports cates</p>
-                            <p class="text-[20px] font-bold opacity-75"><span>39.00</span> TK</p>
+                            <p class="text-[20px] font-bold opacity-75"><span>305.00</span> TK</p>
                             <button class="cart-btn btn btn-active btn-primary w-full mt-2.5 text-[20px]">Add to
                                 Cart</button>
                         </div>
@@ -256,8 +256,9 @@
                 <div>
                     <p class="text-2xl font-bold">Have Coupon?</p>
                     <div class="flex mt-4">
-                        <input type="text" placeholder="Type here" class="input rounded-l-lg rounded-r-none" />
-                        <button class="btn btn-secondary rounded-r-lg rounded-l-none">Apply</button>
+                        <input id="coupon-code-input" type="text" placeholder="Type here"
+                            class="input rounded-l-lg rounded-r-none" />
+                        <button id="coupon-btn" class="btn btn-secondary rounded-r-lg rounded-l-none">Apply</button>
                     </div>
                 </div>
 
@@ -284,13 +285,13 @@
 
                 <div class="text-[20px] font-bold border-t border-t-gray-300 border-b border-b-gray-300 mt-5 py-2.5">
                     <p>
-                        Total price: <span class="opacity-75"><span>0.00</span> TK</span>
+                        Total price: <span class="opacity-75"><span id="total-price">0.00</span> TK</span>
                     </p>
                     <p>
-                        Discount : <span class="opacity-75"><span>0.00</span> TK</span>
+                        Discount : <span class="opacity-75"><span id="total-discount">0.00</span> TK</span>
                     </p>
                     <p>
-                        Total: <span class="opacity-75"><span>0.00</span> TK</span>
+                        Total Payment: <span class="opacity-75"><span id="final-price">0.00</span> TK</span>
                     </p>
                 </div>
 
